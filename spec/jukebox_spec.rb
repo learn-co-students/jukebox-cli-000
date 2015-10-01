@@ -18,6 +18,7 @@ describe "CLI Jukebox" do
   context "methods" do 
     describe "#help" do 
       it "lists out the possible commands" do 
+        ##allow(self).to receive(:gets).and_return("help") ##added this one
         expect { help }.to output(/^(?=.*help)(?=.*list)(?=.*play)(?=.*exit).+/m).to_stdout
       end
     end
@@ -45,13 +46,15 @@ describe "CLI Jukebox" do
     end
 
     describe "#list" do
-      it "lists out the available songs" do  
+      it "lists out the available songs" do 
+        ##allow(self).to receive(:gets).and_return("list") ##added this one 
         expect { list(songs) }.to output(/Phoenix - 1901/).to_stdout
       end
     end
 
     describe "#exit_jukebox" do 
       it "terminates the running of the program and outputs 'Goodbye'" do
+        ##allow(self).to receive(:gets).and_return("exit")  ##added
         expect { exit_jukebox }.to output(/Goodbye/).to_stdout 
       end
     end
