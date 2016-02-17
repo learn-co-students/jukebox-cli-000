@@ -3,13 +3,13 @@
 #with the correct path to this directory on your computer
 
 my_songs = {
-  "Go Go GO" => 'https://www.nitrous.io/home/nitrous/code/labs/jukebox-cli/audio/Emerald-Park/01.mp3',
-  "LiberTeens" => 'https://www.nitrous.io/home/nitrous/code/labs/jukebox-cli/audio/Emerald-Park/02.mp3',
-  "Hamburg" =>  'https://www.nitrous.io/home/nitrous/code/labs/jukebox-cli/audio/Emerald-Park/03.mp3',
-  "Guiding Light" => 'https://www.nitrous.io/home/nitrous/code/labs/jukebox-cli/audio/Emerald-Park/04.mp3',
-  "Wolf" => 'https://www.nitrous.io/home/nitrous/code/labs/jukebox-cli/audio/Emerald-Park/05.mp3',
-  "Blue" => 'https://www.nitrous.io/home/nitrous/code/labs/jukebox-cli/audio/Emerald-Park/06.mp3',
-  "Graduation Failed" => 'https://www.nitrous.io/home/nitrous/code/labs/jukebox-cli/audio/Emerald-Park/07.mp3'
+  "Go Go GO" => 'home/nitrous/code/labs/jukebox-cli-000/audio/Emerald-Park/01.mp3',
+  "LiberTeens" => 'home/nitrous/code/labs/jukebox-cli-000/audio/Emerald-Park/02.mp3',
+  "Hamburg" =>  'home/nitrous/code/labs/jukebox-cli-000/audio/Emerald-Park/03.mp3',
+  "Guiding Light" => 'home/nitrous/code/labs/jukebox-cli-000/audio/Emerald-Park/04.mp3',
+  "Wolf" => 'home/nitrous/code/labs/jukebox-cli-000/audio/Emerald-Park/05.mp3',
+  "Blue" => 'home/nitrous/code/labs/jukebox-cli-000/audio/Emerald-Park/06.mp3',
+  "Graduation Failed" => 'home/nitrous/code/labs/jukebox-cli-000/audio/Emerald-Park/07.mp3'
 }
 
 def help
@@ -31,7 +31,7 @@ def play(my_songs)
     puts "Invalid input, please try again"
   else
     puts "Now playing #{song_name}"
-    system 'open' << my_songs[song_name]
+    system 'open /home/nitrous/code/labs/jukebox-cli-000/audio/Emerald-Park/'  << my_songs[song_name]
   end
 end
 
