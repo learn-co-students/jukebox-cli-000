@@ -26,7 +26,7 @@ def list(song_list)
 end
 
 def play(song_list)
-  count = song_list.length 
+  count = song_list.length
   puts "Please enter a song name or number:"
   song_choice = gets.chomp
   if song_list.include?(song_choice)
@@ -38,19 +38,18 @@ def play(song_list)
   else
     puts "Invalid input, please try again"
   end
-   
-end  
+
+end
 
 def exit_jukebox
   puts "Goodbye"
-end 
+end
 
-def run(songs) 
-  help
+def run(songs)
 
-  puts "Please enter a command"
-  command = gets.chomp 
-  
+  puts "Please enter a command:"
+  command = gets.chomp
+
   while command != "exit"
     if command == "play"
       play(songs)
@@ -58,16 +57,14 @@ def run(songs)
       list(songs)
     elsif command == "help"
       help
-    else 
+    else
       puts "Invalid Command"
-    end 
+    end
     puts "Please enter a command"
     command = gets.chomp
-  end 
-  
+  end
+
   if command == "exit"
     exit_jukebox
   end
 end
-
-run(songs)
